@@ -22,6 +22,6 @@ Get-ChildItem (Join-Path $root "kaggle") -Directory | Where-Object { -not $Only 
     $j.id = "$user/$slug"
     $j | ConvertTo-Json -Depth 5 | Set-Content $meta -Encoding ascii
     Write-Host "Pushing $($j.id) ..."
+    # Kaggle derives the URL slug from the title; the push output prints the real URL
     kaggle kernels push -p $_.FullName
-    Write-Host "https://www.kaggle.com/code/$user/$slug"
 }

@@ -18,13 +18,21 @@ def open_tree(url, treename, timeout=180):
     import uproot
     opts = {"timeout": timeout}
     if url.startswith("http"):
-        # plain urllib-based HTTP source: no aiohttp/fsspec dependency
-        opts["handler"] = uproot.source.http.HTTPSource
+        try:
+            import aiohttp  # noqa: F401  (fsspec HTTP backend; robust against multipart issues)
+        except ImportError:
+            opts["handler"] = uproot.source.http.HTTPSource
     return uproot.open(url, **opts)[treename]
 
 
-def score_jets(model, cache_mod, jc, device="cpu", batch_size=256, max_particles=128):
-    """jc: JetClass-named awkward record array -> softmax scores (J, 10)."""
+PART_SAMPLE_PER_CHUNK = 5000
+
+
+def score_jets(model, cache_mod, jc, device="cpu", batch_size=256, max_particles=128,
+               return_feats=False):
+    """jc: JetClass-named awkward record array -> softmax scores (J, 10).
+    With return_feats also returns a sample of the normalized particle features
+    actually fed to the network (for input-level data/MC comparisons)."""
     import torch
     feats, vectors, counts = F.build_inputs(jc, cache_mod, max_particles)
     out = []
