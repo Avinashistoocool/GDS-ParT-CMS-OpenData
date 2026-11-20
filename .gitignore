@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+scratch/
+results/**/*.npz
+!results/local/*.npz
+.pytest_cache/
+*.tgz
