@@ -28,6 +28,13 @@ def open_tree(url, treename, timeout=180):
 PART_SAMPLE_PER_CHUNK = 5000
 
 
+def past_deadline():
+    """CMSOD_DEADLINE (unix time) lets a batch job stop reading cleanly and keep what it has."""
+    import os
+    d = os.environ.get("CMSOD_DEADLINE")
+    return bool(d) and time.time() > float(d)
+
+
 def score_jets(model, cache_mod, jc, device="cpu", batch_size=256, max_particles=128,
                return_feats=False):
     """jc: JetClass-named awkward record array -> softmax scores (J, 10).
@@ -78,14 +85,29 @@ def process_pfnano(url, region, model, cache_mod, golden=None, device="cpu", max
         raise ValueError(region)
     stop = min(tree.num_entries, max_events) if max_events else tree.num_entries
     tables, n_ev, t0 = [], 0, time.time()
-    for ev in tree.iterate(branches + F.PFNANO_CAND_BRANCHES, entry_stop=stop, step_size=step,
-                           library="ak"):
+    # two passes per chunk: light event-level branches first, and the heavy PF-candidate
+    # branches only for the entry range that contains selected events (most chunks of
+    # SingleMuon have none)
+    for start in range(0, stop, step):
+        if past_deadline():
+            log("  deadline reached, stopping")
+            break
+        end = min(start + step, stop)
+        evl = tree.arrays(branches, entry_start=start, entry_stop=end, library="ak")
         # loose preselection on the stored jet pT; final cut on the constituent jet
-        idx, evmask = select(ev, golden, pt_min=0.8 * pt_range[0], pt_max=1.2 * pt_range[1],
+        idx, evmask = select(evl, golden, pt_min=0.8 * pt_range[0], pt_max=1.2 * pt_range[1],
                              eta_max=eta_max + 0.2)
-        n_ev += len(ev)
-        if ak.sum(ak.num(idx)) == 0:
+        n_ev += end - start
+        sel = np.nonzero(ak.to_numpy(ak.num(idx)) > 0)[0]
+        if len(sel) == 0:
             continue
+        lo, hi = int(sel[0]), int(sel[-1]) + 1
+        cands = tree.arrays(F.PFNANO_CAND_BRANCHES, entry_start=start + lo, entry_stop=start + hi,
+                            library="ak")
+        ev = evl[lo:hi]
+        for b in F.PFNANO_CAND_BRANCHES:
+            ev = ak.with_field(ev, cands[b], b)
+        idx = idx[lo:hi]
         cons, evt = F.pfnano_jet_constituents(ev, idx, chs_like=chs_like)
         jc = F.constituents_to_jetclass(cons)
         msd = ak.to_numpy(ak.flatten(ev.FatJet_msoftdrop[idx]))
@@ -111,6 +133,9 @@ def process_mc(url, model, cache_mod, device="cpu", max_jets=None, step=5000,
     stop = min(tree.num_entries, max_jets) if max_jets else tree.num_entries
     tables, t0 = [], time.time()
     for t in tree.iterate(F.MC_BRANCHES, entry_stop=stop, step_size=step, library="ak"):
+        if past_deadline():
+            log("  deadline reached, stopping")
+            break
         pre = S.select_mc(t, 0.8 * pt_range[0], 1.2 * pt_range[1], eta_max + 0.2)
         t = t[pre]
         jc = F.constituents_to_jetclass(F.mc_ntuple_constituents(t))
