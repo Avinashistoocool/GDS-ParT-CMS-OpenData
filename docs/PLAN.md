@@ -11,7 +11,7 @@ its outputs disagree with simulation.
 | 4 | Inference + data/MC comparison (ratio plots, KS, chi2, slices in pT, eta, n_const, nPV; input-feature KS) | **done** (code) |
 | 5 | CPU tests incl. real-checkpoint inference | **done** (`pytest tests`, 7 passed) |
 | 6 | Local end-to-end proof on one real file each (JetHT 3k events, CMS sim 6k jets, JetClass 6k jets) | **done**, see `results/local/report/SUMMARY.md` |
-| 7 | Full-statistics run on Kaggle GPU | **blocked**: Kaggle kernels on this account have no internet (DNS fails for pypi/github/opendata). Needs phone verification of the Kaggle account; kernel then just needs re-running |
+| 7 | Full-statistics run on Kaggle | **running**: version 4 of the kernel (CPU, internet on, because of the 2-GPU-session limit; repo metadata stays GPU) with the full-size config (8 JetHT files x 200k events, 60 SingleMuon files, 4 simulation files, 4 JetClass files, 10.5 h budget) |
 | 8 | SingleMuon ttbar CR on real data | pending (Kaggle) |
 | 9 | Fine-tune on CMS simulation (12102 train split) and redo comparison | pending |
 | 10 | Systematic checks: cone vs anti-kT constituents (needs fastjet), CHS emulation on/off, d0 scale | pending |
