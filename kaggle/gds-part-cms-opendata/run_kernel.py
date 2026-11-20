@@ -21,7 +21,16 @@ WORK = "/kaggle/working"
 OUT = f"{WORK}/results"
 REPO = f"{WORK}/GDS-ParT-CMS-OpenData"
 
-sh("pip install -q 'uproot>=5' awkward scikit-learn")
+import socket
+try:
+    socket.getaddrinfo("opendata.cern.ch", 443)
+except OSError as e:
+    raise SystemExit(
+        f"No internet in this Kaggle session ({e}). CMS Open Data is streamed from opendata.cern.ch, "
+        "so the kernel needs internet: verify the Kaggle account by phone (Settings -> Phone "
+        "verification) and keep 'enable_internet': true in kernel-metadata.json.")
+
+sh("pip install -q 'uproot>=5' awkward scikit-learn aiohttp requests")
 if not os.path.exists(REPO):
     sh(f"git clone --depth 1 https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData.git {REPO}")
 sys.path.insert(0, f"{REPO}/src")

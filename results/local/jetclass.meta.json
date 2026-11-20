@@ -1,0 +1,34 @@
+{
+  "source": "jetclass",
+  "files": [
+    "D:\\JetClass\\val\\HToBB_120.root",
+    "D:\\JetClass\\val\\ZJetsToNuNu_120.root"
+  ],
+  "n_events_read": 0,
+  "n_jets": 6000,
+  "golden_json": false,
+  "chs_like": true,
+  "model": {
+    "ckpt": "C:\\Users\\Avinash\\OneDrive\\Desktop\\gds_part\\checkpoints\\v2_shared_10M_10ep\\best.pt",
+    "epoch": 9,
+    "val_acc": 0.848672,
+    "config": {
+      "n_particle_features": 17,
+      "n_pairwise_features": 4,
+      "n_classes": 10,
+      "embed_dim": 128,
+      "n_heads": 8,
+      "n_layers": 8,
+      "ffn_dim": 512,
+      "pairwise_embed_dim": 64,
+      "dropout": 0.1,
+      "max_particles": 128,
+      "gate_mode": "identity",
+      "per_layer_gate": false,
+      "pair_bias": true,
+      "n_cls_layers": 2
+    }
+  },
+  "seconds": 86.2,
+  "record": null
+}

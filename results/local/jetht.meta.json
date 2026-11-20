@@ -1,0 +1,33 @@
+{
+  "source": "jetht",
+  "files": [
+    "https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/JetHT/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240218_191008/0000/nano_data2016_1-1.root"
+  ],
+  "n_events_read": 3000,
+  "n_jets": 124,
+  "golden_json": true,
+  "chs_like": true,
+  "model": {
+    "ckpt": "C:\\Users\\Avinash\\OneDrive\\Desktop\\gds_part\\checkpoints\\v2_shared_10M_10ep\\best.pt",
+    "epoch": 9,
+    "val_acc": 0.848672,
+    "config": {
+      "n_particle_features": 17,
+      "n_pairwise_features": 4,
+      "n_classes": 10,
+      "embed_dim": 128,
+      "n_heads": 8,
+      "n_layers": 8,
+      "ffn_dim": 512,
+      "pairwise_embed_dim": 64,
+      "dropout": 0.1,
+      "max_particles": 128,
+      "gate_mode": "identity",
+      "per_layer_gate": false,
+      "pair_bias": true,
+      "n_cls_layers": 2
+    }
+  },
+  "seconds": 65.5,
+  "record": 31308
+}
