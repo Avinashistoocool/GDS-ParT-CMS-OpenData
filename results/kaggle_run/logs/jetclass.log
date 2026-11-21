@@ -1,0 +1,14 @@
+[run] model /kaggle/working/gds_part/checkpoints/v2_shared_10M_10ep/best.pt (epoch 9, JetClass val acc 0.848672)
+[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root
+  50000 jets from /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root
+[run] checkpoint jetclass.npz: 50000 jets, 0 events, 914.4 s
+[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root
+  50000 jets from /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root
+[run] checkpoint jetclass.npz: 100000 jets, 0 events, 2010.6 s
+[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root
+  50000 jets from /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root
+[run] checkpoint jetclass.npz: 150000 jets, 0 events, 2682.3 s
+[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root
+  50000 jets from /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root
+[run] checkpoint jetclass.npz: 200000 jets, 0 events, 3806.2 s
+[run] wrote jetclass.npz: 200000 jets, 0 events, 3807.3 s

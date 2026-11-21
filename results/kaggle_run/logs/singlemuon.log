@@ -1,0 +1,217 @@
+[run] model /kaggle/working/gds_part/checkpoints/v2_shared_10M_10ep/best.pt (epoch 9, JetClass val acc 0.848672)
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_1.root
+  24000/395138 events, 1 jets (13s)
+  96000/395138 events, 2 jets (51s)
+[run] checkpoint singlemuon.npz: 2 jets, 395138 events, 201.3 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_2-1.root
+[run] checkpoint singlemuon.npz: 2 jets, 529514 events, 299.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_2-2.root
+[run] checkpoint singlemuon.npz: 2 jets, 553535 events, 320.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_2.root
+  26000/372857 events, 1 jets (20s)
+  38000/372857 events, 2 jets (33s)
+  172000/372857 events, 3 jets (96s)
+[run] checkpoint singlemuon.npz: 5 jets, 926392 events, 548.2 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-1.root
+[run] checkpoint singlemuon.npz: 5 jets, 1004981 events, 597.8 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-2.root
+  14000/84397 events, 1 jets (8s)
+[run] checkpoint singlemuon.npz: 6 jets, 1089378 events, 628.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-3.root
+[run] checkpoint singlemuon.npz: 6 jets, 1173193 events, 691.3 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-4.root
+  42000/74754 events, 1 jets (23s)
+[run] checkpoint singlemuon.npz: 7 jets, 1247947 events, 736.4 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-5.root
+[run] checkpoint singlemuon.npz: 7 jets, 1324188 events, 786.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-6.root
+[run] checkpoint singlemuon.npz: 7 jets, 1398546 events, 811.3 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-7.root
+  48000/80081 events, 1 jets (22s)
+  62000/80081 events, 2 jets (43s)
+[run] checkpoint singlemuon.npz: 9 jets, 1478627 events, 878.0 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-8.root
+[run] checkpoint singlemuon.npz: 9 jets, 1561055 events, 916.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-9.root
+[run] checkpoint singlemuon.npz: 9 jets, 1632276 events, 940.4 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-10.root
+[run] checkpoint singlemuon.npz: 9 jets, 1712680 events, 973.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-11.root
+[run] checkpoint singlemuon.npz: 9 jets, 1772393 events, 1022.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-12.root
+[run] checkpoint singlemuon.npz: 9 jets, 1823092 events, 1051.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-13.root
+  52000/78697 events, 1 jets (36s)
+  62000/78697 events, 2 jets (45s)
+[run] checkpoint singlemuon.npz: 11 jets, 1901789 events, 1104.4 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-14.root
+[run] checkpoint singlemuon.npz: 11 jets, 1975692 events, 1137.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-15.root
+[run] checkpoint singlemuon.npz: 11 jets, 2051198 events, 1210.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-16.root
+[run] checkpoint singlemuon.npz: 11 jets, 2132449 events, 1263.9 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-17.root
+[run] checkpoint singlemuon.npz: 11 jets, 2211672 events, 1313.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-18.root
+  40000/75272 events, 1 jets (37s)
+[run] checkpoint singlemuon.npz: 12 jets, 2286944 events, 1364.0 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-19.root
+[run] checkpoint singlemuon.npz: 12 jets, 2365701 events, 1422.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-20.root
+[run] checkpoint singlemuon.npz: 12 jets, 2442118 events, 1466.3 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-21.root
+  14000/80908 events, 1 jets (19s)
+[run] checkpoint singlemuon.npz: 13 jets, 2523026 events, 1517.8 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-22.root
+[run] checkpoint singlemuon.npz: 13 jets, 2592206 events, 1558.7 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-23.root
+[run] checkpoint singlemuon.npz: 13 jets, 2671675 events, 1587.0 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-24.root
+[run] checkpoint singlemuon.npz: 13 jets, 2764017 events, 1657.9 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-25.root
+[run] checkpoint singlemuon.npz: 13 jets, 2779495 events, 1664.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-26.root
+[run] checkpoint singlemuon.npz: 13 jets, 2868612 events, 1711.2 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-27.root
+  14000/73048 events, 1 jets (28s)
+  24000/73048 events, 2 jets (41s)
+[run] checkpoint singlemuon.npz: 15 jets, 2941660 events, 1783.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-28.root
+[run] checkpoint singlemuon.npz: 15 jets, 3010057 events, 1826.2 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-29.root
+  24000/79709 events, 1 jets (19s)
+  78000/79709 events, 2 jets (56s)
+[run] checkpoint singlemuon.npz: 17 jets, 3089766 events, 1884.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-30.root
+[run] checkpoint singlemuon.npz: 17 jets, 3150873 events, 1931.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3.root
+  346000/439116 events, 1 jets (229s)
+  414000/439116 events, 2 jets (271s)
+[run] checkpoint singlemuon.npz: 19 jets, 3589989 events, 2226.1 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_4.root
+  282000/427094 events, 1 jets (143s)
+[run] checkpoint singlemuon.npz: 20 jets, 4017083 events, 2434.8 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_5.root
+  50000/433211 events, 1 jets (27s)
+  162000/433211 events, 2 jets (82s)
+  306000/433211 events, 3 jets (160s)
+  382000/433211 events, 4 jets (196s)
+[run] checkpoint singlemuon.npz: 24 jets, 4450294 events, 2662.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_6.root
+  230000/426210 events, 1 jets (124s)
+[run] checkpoint singlemuon.npz: 25 jets, 4876504 events, 2911.4 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_7.root
+[run] checkpoint singlemuon.npz: 25 jets, 5271284 events, 3111.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_8.root
+  46000/422864 events, 1 jets (36s)
+  64000/422864 events, 3 jets (45s)
+  74000/422864 events, 4 jets (54s)
+  86000/422864 events, 5 jets (68s)
+  200000/422864 events, 6 jets (135s)
+  334000/422864 events, 7 jets (206s)
+  412000/422864 events, 8 jets (248s)
+[run] checkpoint singlemuon.npz: 33 jets, 5694148 events, 3365.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_9.root
+  48000/440904 events, 1 jets (25s)
+  178000/440904 events, 2 jets (88s)
+[run] checkpoint singlemuon.npz: 35 jets, 6135052 events, 3578.2 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_10.root
+  40000/435121 events, 1 jets (36s)
+  60000/435121 events, 2 jets (47s)
+  74000/435121 events, 3 jets (60s)
+  148000/435121 events, 4 jets (109s)
+  254000/435121 events, 5 jets (149s)
+[run] checkpoint singlemuon.npz: 40 jets, 6570173 events, 3807.7 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_11.root
+  374000/404667 events, 1 jets (174s)
+[run] checkpoint singlemuon.npz: 41 jets, 6974840 events, 4001.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_12.root
+  50000/428744 events, 1 jets (44s)
+  256000/428744 events, 2 jets (166s)
+  334000/428744 events, 3 jets (222s)
+[run] checkpoint singlemuon.npz: 44 jets, 7403584 events, 4281.7 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_13.root
+  180000/428462 events, 1 jets (67s)
+[run] checkpoint singlemuon.npz: 45 jets, 7832046 events, 4469.3 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_14.root
+  96000/430132 events, 1 jets (46s)
+  176000/430132 events, 2 jets (106s)
+  184000/430132 events, 3 jets (118s)
+  192000/430132 events, 4 jets (127s)
+  268000/430132 events, 5 jets (165s)
+  286000/430132 events, 6 jets (178s)
+  320000/430132 events, 7 jets (212s)
+  368000/430132 events, 8 jets (232s)
+[run] checkpoint singlemuon.npz: 53 jets, 8262178 events, 4721.7 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_15.root
+  100000/414480 events, 1 jets (61s)
+  324000/414480 events, 2 jets (143s)
+  348000/414480 events, 3 jets (178s)
+[run] checkpoint singlemuon.npz: 56 jets, 8676658 events, 4929.8 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_16.root
+  122000/432560 events, 1 jets (77s)
+  124000/432560 events, 2 jets (85s)
+  238000/432560 events, 3 jets (140s)
+  302000/432560 events, 4 jets (173s)
+  368000/432560 events, 5 jets (200s)
+[run] checkpoint singlemuon.npz: 61 jets, 9109218 events, 5155.2 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_17.root
+  264000/415191 events, 1 jets (151s)
+  336000/415191 events, 2 jets (186s)
+  348000/415191 events, 3 jets (197s)
+[run] checkpoint singlemuon.npz: 64 jets, 9524409 events, 5396.0 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_18.root
+  172000/432276 events, 1 jets (93s)
+  406000/432276 events, 2 jets (238s)
+[run] checkpoint singlemuon.npz: 66 jets, 9956685 events, 5643.8 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_19.root
+  208000/432671 events, 1 jets (108s)
+  298000/432671 events, 2 jets (138s)
+[run] checkpoint singlemuon.npz: 68 jets, 10389356 events, 5831.3 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_20.root
+  34000/430037 events, 1 jets (16s)
+  96000/430037 events, 2 jets (43s)
+  146000/430037 events, 3 jets (74s)
+[run] checkpoint singlemuon.npz: 71 jets, 10819393 events, 6057.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_21.root
+  26000/436875 events, 1 jets (19s)
+  188000/436875 events, 2 jets (99s)
+[run] checkpoint singlemuon.npz: 73 jets, 11256268 events, 6274.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_22.root
+  12000/431726 events, 1 jets (10s)
+  52000/431726 events, 2 jets (23s)
+  90000/431726 events, 3 jets (52s)
+  196000/431726 events, 4 jets (111s)
+  244000/431726 events, 5 jets (150s)
+  328000/431726 events, 6 jets (178s)
+[run] checkpoint singlemuon.npz: 79 jets, 11687994 events, 6522.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_23.root
+  96000/429863 events, 1 jets (57s)
+  166000/429863 events, 2 jets (87s)
+  172000/429863 events, 3 jets (105s)
+[run] checkpoint singlemuon.npz: 82 jets, 12117857 events, 6761.5 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_24.root
+  224000/471258 events, 1 jets (113s)
+  232000/471258 events, 2 jets (131s)
+  284000/471258 events, 3 jets (157s)
+  432000/471258 events, 4 jets (259s)
+[run] checkpoint singlemuon.npz: 86 jets, 12589115 events, 7033.4 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_25.root
+  72000/393081 events, 1 jets (60s)
+  102000/393081 events, 2 jets (94s)
+  120000/393081 events, 3 jets (114s)
+[run] checkpoint singlemuon.npz: 89 jets, 12982196 events, 7407.6 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_26.root
+  82000/432979 events, 1 jets (47s)
+  294000/432979 events, 2 jets (152s)
+  378000/432979 events, 3 jets (205s)
+[run] checkpoint singlemuon.npz: 92 jets, 13415175 events, 7638.7 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_27.root
+  14000/446167 events, 1 jets (12s)
+  42000/446167 events, 2 jets (39s)
+[run] checkpoint singlemuon.npz: 94 jets, 13861342 events, 7861.9 s
+[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_28.root
+  82000/418293 events, 1 jets (39s)
+  380000/418293 events, 2 jets (186s)
+[run] checkpoint singlemuon.npz: 96 jets, 14279635 events, 8062.1 s
+[run] wrote singlemuon.npz: 96 jets, 14279635 events, 8062.1 s

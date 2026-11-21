@@ -45,13 +45,25 @@ Kernel: https://www.kaggle.com/code/avinashchandragupta/gds-part-cms-open-data
 
 ## Results so far
 
-Local end-to-end run, one file per source (pipeline validation, low statistics):
-[results/local/report/SUMMARY.md](results/local/report/SUMMARY.md). In short:
-JetHT data vs CMS simulation QCD agree within the (small) statistics except a
-mild HbbvsQCD shift (KS p = 0.02); CMS simulation vs JetClass shows a large,
-pT/eta-independent shift (KS D ~ 0.25-0.39) traced mainly to impact-parameter
-errors and relative pT/E inputs; H->bb vs QCD AUC drops from 0.998 (JetClass)
-to 0.972 (CMS simulation). Status and next steps: [docs/PLAN.md](docs/PLAN.md).
+Full write-up with caveats: [docs/RESULTS.md](docs/RESULTS.md). Kaggle run v4
+scored 31,160 JetHT data jets, 96 SingleMuon jets, 268,394 CMS-simulation jets
+and 200,000 JetClass jets. Arrays and plots are in `results/kaggle_run/`.
+
+* **Data vs CMS simulation (QCD dijets):** mean tagger outputs agree within
+  0.01-0.02 (score_QCD 0.534 vs 0.522, TvsQCD 0.132 vs 0.133), but the shapes
+  differ significantly (KS D 0.05-0.06, p < 1e-50). The difference is flat in
+  pT and nPV and grows with constituent multiplicity (KS D 0.015 for < 30
+  constituents, 0.12 for 60-80). Data jets have ~6 fewer constituents, which
+  partly cancels the per-multiplicity shift.
+* **CMS simulation vs JetClass (Delphes):** a 4-6x larger shift (KS D
+  0.22-0.36), driven by d0err and relative-pT inputs. H->bb vs QCD AUC drops
+  from 0.998 to 0.975.
+* **ttbar CR (data):** top-like jets have mean TvsQCD 0.70 vs 0.13 for dijets,
+  but only 33 jets and no ttbar simulation.
+
+The model was trained on Delphes, and the simulation uses older (80X) reco than
+the UL2016 data. Status and next steps: [docs/PLAN.md](docs/PLAN.md). Earlier
+one-file local validation: [results/local/report/SUMMARY.md](results/local/report/SUMMARY.md).
 
 ## Layout
 

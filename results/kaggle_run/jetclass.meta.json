@@ -1,0 +1,36 @@
+{
+  "source": "jetclass",
+  "files": [
+    "/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root",
+    "/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root",
+    "/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root",
+    "/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root"
+  ],
+  "n_events_read": 0,
+  "n_jets": 200000,
+  "golden_json": false,
+  "chs_like": true,
+  "model": {
+    "ckpt": "/kaggle/working/gds_part/checkpoints/v2_shared_10M_10ep/best.pt",
+    "epoch": 9,
+    "val_acc": 0.848672,
+    "config": {
+      "n_particle_features": 17,
+      "n_pairwise_features": 4,
+      "n_classes": 10,
+      "embed_dim": 128,
+      "n_heads": 8,
+      "n_layers": 8,
+      "ffn_dim": 512,
+      "pairwise_embed_dim": 64,
+      "dropout": 0.1,
+      "max_particles": 128,
+      "gate_mode": "identity",
+      "per_layer_gate": false,
+      "pair_bias": true,
+      "n_cls_layers": 2
+    }
+  },
+  "seconds": 3807.3,
+  "record": null
+}

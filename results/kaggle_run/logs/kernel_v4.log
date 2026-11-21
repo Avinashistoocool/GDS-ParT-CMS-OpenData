@@ -1,0 +1,365 @@
+[{"stream_name":"stdout","time":1.060953045,"data":"config: {'BUDGET_H': 10.5, 'N_JETHT_FILES': 8, 'MAX_EVENTS': 200000, 'N_SMU_FILES': 60, 'N_MC_FILES': 4, 'MAX_MC_JETS': 0, 'JC_JETS': 50000}\n"}
+,{"stream_name":"stdout","time":1.308429216,"data":"+ pip install -q 'uproot\u003e=5' awkward scikit-learn aiohttp requests\n"}
+,{"stream_name":"stdout","time":8.233316991,"data":"+ git clone --depth 1 https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData.git /kaggle/working/GDS-ParT-CMS-OpenData\n"}
+,{"stream_name":"stderr","time":8.259481518,"data":"Cloning into '/kaggle/working/GDS-ParT-CMS-OpenData'...\n"}
+,{"stream_name":"stdout","time":8.899847713,"data":"+ git -C /kaggle/working/GDS-ParT-CMS-OpenData log -1 --oneline\n"}
+,{"stream_name":"stdout","time":8.905825358,"data":"d32b8dd Full-size Kaggle GPU config: parallel sources, deadline + per-file checkpoints, two-pass PFNano reading\n"}
+,{"stream_name":"stdout","time":8.90683043,"data":"+ nvidia-smi --query-gpu=name,memory.total --format=csv\n"}
+,{"stream_name":"stderr","time":8.907909665,"data":"/bin/sh: 1: nvidia-smi: not found\n"}
+,{"stream_name":"stdout","time":8.927169709,"data":"[gdspart] downloading https://raw.githubusercontent.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/b38f1b7d7ad5d67d4f4933b2a2fbe646fed26da7/gds_part_colab.py\n"}
+,{"stream_name":"stdout","time":9.192112626,"data":"[gdspart] downloading https://raw.githubusercontent.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/b38f1b7d7ad5d67d4f4933b2a2fbe646fed26da7/data/jetclass_cache.py\n"}
+,{"stream_name":"stdout","time":9.31758412,"data":"[gdspart] downloading https://raw.githubusercontent.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/b38f1b7d7ad5d67d4f4933b2a2fbe646fed26da7/checkpoints/v2_shared_10M_10ep/best.pt\n"}
+,{"stream_name":"stdout","time":13.837292009,"data":"JetClass files: ['/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root', '/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root', '/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root', '/kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":13.837325274,"data":"+ python -u /kaggle/working/GDS-ParT-CMS-OpenData/src/cmsod/run.py --out /kaggle/working/results --source jetclass --max-jets 50000 --jetclass-files /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root\n"}
+,{"stream_name":"stdout","time":13.837912241,"data":"+ python -u /kaggle/working/GDS-ParT-CMS-OpenData/src/cmsod/run.py --out /kaggle/working/results --source mc_qcd_hbb --files 4\n"}
+,{"stream_name":"stdout","time":13.838392248,"data":"+ python -u /kaggle/working/GDS-ParT-CMS-OpenData/src/cmsod/run.py --out /kaggle/working/results --source jetht --files 8 --max-events 200000\n"}
+,{"stream_name":"stdout","time":13.839059329,"data":"+ python -u /kaggle/working/GDS-ParT-CMS-OpenData/src/cmsod/run.py --out /kaggle/working/results --source singlemuon --files 60\n"}
+,{"stream_name":"stdout","time":133.839904988,"data":"[0.04 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":133.8401058,"data":"[0.04 h] mc_qcd_hbb: ['  3343 jets (101s)']\n"}
+,{"stream_name":"stdout","time":133.840123326,"data":"[0.04 h] jetht: ['  12000/42037 events, 664 jets (104s)']\n"}
+,{"stream_name":"stdout","time":133.840250912,"data":"[0.04 h] singlemuon: ['  96000/395138 events, 2 jets (51s)']\n"}
+,{"stream_name":"stdout","time":253.843496624,"data":"[0.07 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":253.84377163,"data":"[0.07 h] mc_qcd_hbb: ['  6680 jets (208s)']\n"}
+,{"stream_name":"stdout","time":253.843949449,"data":"[0.07 h] jetht: ['  24000/42037 events, 1300 jets (220s)']\n"}
+,{"stream_name":"stdout","time":253.844119904,"data":"[0.07 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_2-1.root']\n"}
+,{"stream_name":"stdout","time":373.844739549,"data":"[0.10 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":373.844914617,"data":"[0.10 h] mc_qcd_hbb: ['  10057 jets (311s)']\n"}
+,{"stream_name":"stdout","time":373.844925673,"data":"[0.10 h] jetht: ['[run] jetht: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/JetHT/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240218_191008/0000/nano_data2016_1-2.root']\n"}
+,{"stream_name":"stdout","time":373.845042566,"data":"[0.10 h] singlemuon: ['  26000/372857 events, 1 jets (20s)']\n"}
+,{"stream_name":"stdout","time":493.845875556,"data":"[0.14 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":493.846215418,"data":"[0.14 h] mc_qcd_hbb: ['  15126 jets (473s)']\n"}
+,{"stream_name":"stdout","time":493.846750194,"data":"[0.14 h] jetht: ['  14000/103850 events, 777 jets (114s)']\n"}
+,{"stream_name":"stdout","time":493.846764171,"data":"[0.14 h] singlemuon: ['  172000/372857 events, 3 jets (96s)']\n"}
+,{"stream_name":"stdout","time":613.848146508,"data":"[0.17 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":613.848624735,"data":"[0.17 h] mc_qcd_hbb: ['  18450 jets (578s)']\n"}
+,{"stream_name":"stdout","time":613.849034368,"data":"[0.17 h] jetht: ['  26000/103850 events, 1520 jets (223s)']\n"}
+,{"stream_name":"stdout","time":613.850455162,"data":"[0.17 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-1.root']\n"}
+,{"stream_name":"stdout","time":733.853921039,"data":"[0.20 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":733.853988018,"data":"[0.20 h] mc_qcd_hbb: ['  21686 jets (686s)']\n"}
+,{"stream_name":"stdout","time":733.854070425,"data":"[0.20 h] jetht: ['  40000/103850 events, 2368 jets (343s)']\n"}
+,{"stream_name":"stdout","time":733.854153231,"data":"[0.20 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-4.root']\n"}
+,{"stream_name":"stdout","time":853.854718342,"data":"[0.24 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/HToBB_120.root']\n"}
+,{"stream_name":"stdout","time":853.854771219,"data":"[0.24 h] mc_qcd_hbb: ['  25010 jets (793s)']\n"}
+,{"stream_name":"stdout","time":853.854888278,"data":"[0.24 h] jetht: ['  58000/103850 events, 3381 jets (474s)']\n"}
+,{"stream_name":"stdout","time":853.854976341,"data":"[0.24 h] singlemuon: ['  48000/80081 events, 1 jets (22s)']\n"}
+,{"stream_name":"stdout","time":973.855905051,"data":"[0.27 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":973.855949126,"data":"[0.27 h] mc_qcd_hbb: ['  30046 jets (951s)']\n"}
+,{"stream_name":"stdout","time":973.855970766,"data":"[0.27 h] jetht: ['  74000/103850 events, 4149 jets (595s)']\n"}
+,{"stream_name":"stdout","time":973.855976136,"data":"[0.27 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-10.root']\n"}
+,{"stream_name":"stdout","time":1093.856293597,"data":"[0.30 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1093.856392714,"data":"[0.30 h] mc_qcd_hbb: ['  33348 jets (1054s)']\n"}
+,{"stream_name":"stdout","time":1093.856503936,"data":"[0.30 h] jetht: ['  88000/103850 events, 4876 jets (702s)']\n"}
+,{"stream_name":"stdout","time":1093.856658226,"data":"[0.30 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-13.root']\n"}
+,{"stream_name":"stdout","time":1213.8579205,"data":"[0.34 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1213.858153982,"data":"[0.34 h] mc_qcd_hbb: ['  36652 jets (1154s)']\n"}
+,{"stream_name":"stdout","time":1213.858173035,"data":"[0.34 h] jetht: ['  2000/104122 events, 120 jets (20s)']\n"}
+,{"stream_name":"stdout","time":1213.858291642,"data":"[0.34 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-15.root']\n"}
+,{"stream_name":"stdout","time":1333.858913295,"data":"[0.37 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1333.859039605,"data":"[0.37 h] mc_qcd_hbb: ['  40046 jets (1256s)']\n"}
+,{"stream_name":"stdout","time":1333.859049585,"data":"[0.37 h] jetht: ['  18000/104122 events, 948 jets (134s)']\n"}
+,{"stream_name":"stdout","time":1333.859142743,"data":"[0.37 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-18.root']\n"}
+,{"stream_name":"stdout","time":1453.859847507,"data":"[0.40 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1453.860280927,"data":"[0.40 h] mc_qcd_hbb: ['  45247 jets (1425s)']\n"}
+,{"stream_name":"stdout","time":1453.860681608,"data":"[0.40 h] jetht: ['  34000/104122 events, 1774 jets (262s)']\n"}
+,{"stream_name":"stdout","time":1453.861108476,"data":"[0.40 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-20.root']\n"}
+,{"stream_name":"stdout","time":1573.863586887,"data":"[0.44 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1573.863925174,"data":"[0.44 h] mc_qcd_hbb: ['  48640 jets (1529s)']\n"}
+,{"stream_name":"stdout","time":1573.864238765,"data":"[0.44 h] jetht: ['  48000/104122 events, 2495 jets (376s)']\n"}
+,{"stream_name":"stdout","time":1573.864477201,"data":"[0.44 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-22.root']\n"}
+,{"stream_name":"stdout","time":1693.86748968,"data":"[0.47 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1693.867791101,"data":"[0.47 h] mc_qcd_hbb: ['  51968 jets (1636s)']\n"}
+,{"stream_name":"stdout","time":1693.868072289,"data":"[0.47 h] jetht: ['  62000/104122 events, 3239 jets (493s)']\n"}
+,{"stream_name":"stdout","time":1693.86830392,"data":"[0.47 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-26.root']\n"}
+,{"stream_name":"stdout","time":1813.869266795,"data":"[0.50 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1813.869324951,"data":"[0.50 h] mc_qcd_hbb: ['  57013 jets (1791s)']\n"}
+,{"stream_name":"stdout","time":1813.869330173,"data":"[0.50 h] jetht: ['  76000/104122 events, 3973 jets (610s)']\n"}
+,{"stream_name":"stdout","time":1813.86933446,"data":"[0.50 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-28.root']\n"}
+,{"stream_name":"stdout","time":1933.870482093,"data":"[0.54 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/TTBar_120.root']\n"}
+,{"stream_name":"stdout","time":1933.870736038,"data":"[0.54 h] mc_qcd_hbb: ['  60360 jets (1895s)']\n"}
+,{"stream_name":"stdout","time":1933.873477046,"data":"[0.54 h] jetht: ['  92000/104122 events, 4819 jets (735s)']\n"}
+,{"stream_name":"stdout","time":1933.873701984,"data":"[0.54 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3-30.root']\n"}
+,{"stream_name":"stdout","time":2053.874392925,"data":"[0.57 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":2053.874448262,"data":"[0.57 h] mc_qcd_hbb: ['  63831 jets (2003s)']\n"}
+,{"stream_name":"stdout","time":2053.874811105,"data":"[0.57 h] jetht: ['  2000/96155 events, 88 jets (26s)']\n"}
+,{"stream_name":"stdout","time":2053.875310077,"data":"[0.57 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3.root']\n"}
+,{"stream_name":"stdout","time":2173.876030396,"data":"[0.60 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":2173.876705366,"data":"[0.60 h] mc_qcd_hbb: ['  1692 jets (54s)']\n"}
+,{"stream_name":"stdout","time":2173.876735268,"data":"[0.60 h] jetht: ['  16000/96155 events, 778 jets (138s)']\n"}
+,{"stream_name":"stdout","time":2173.876802133,"data":"[0.60 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_3.root']\n"}
+,{"stream_name":"stdout","time":2293.878052233,"data":"[0.64 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":2293.878547457,"data":"[0.64 h] mc_qcd_hbb: ['  5037 jets (160s)']\n"}
+,{"stream_name":"stdout","time":2293.879001759,"data":"[0.64 h] jetht: ['  30000/96155 events, 1461 jets (252s)']\n"}
+,{"stream_name":"stdout","time":2293.879019028,"data":"[0.64 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_4.root']\n"}
+,{"stream_name":"stdout","time":2413.882545712,"data":"[0.67 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":2413.882828689,"data":"[0.67 h] mc_qcd_hbb: ['  8384 jets (266s)']\n"}
+,{"stream_name":"stdout","time":2413.883149057,"data":"[0.67 h] jetht: ['  46000/96155 events, 2259 jets (378s)']\n"}
+,{"stream_name":"stdout","time":2413.885423275,"data":"[0.67 h] singlemuon: ['  282000/427094 events, 1 jets (143s)']\n"}
+,{"stream_name":"stdout","time":2533.883974149,"data":"[0.70 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":2533.884299442,"data":"[0.70 h] mc_qcd_hbb: ['  11758 jets (366s)']\n"}
+,{"stream_name":"stdout","time":2533.88450424,"data":"[0.70 h] jetht: ['  62000/96155 events, 2883 jets (496s)']\n"}
+,{"stream_name":"stdout","time":2533.884703672,"data":"[0.70 h] singlemuon: ['  50000/433211 events, 1 jets (27s)']\n"}
+,{"stream_name":"stdout","time":2653.885256505,"data":"[0.74 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root']\n"}
+,{"stream_name":"stdout","time":2653.885611393,"data":"[0.74 h] mc_qcd_hbb: ['  16932 jets (529s)']\n"}
+,{"stream_name":"stdout","time":2653.886002115,"data":"[0.74 h] jetht: ['  78000/96155 events, 3607 jets (618s)']\n"}
+,{"stream_name":"stdout","time":2653.886460451,"data":"[0.74 h] singlemuon: ['  382000/433211 events, 4 jets (196s)']\n"}
+,{"stream_name":"stdout","time":2773.888009506,"data":"[0.77 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":2773.888238418,"data":"[0.77 h] mc_qcd_hbb: ['  20291 jets (629s)']\n"}
+,{"stream_name":"stdout","time":2773.888493167,"data":"[0.77 h] jetht: ['  94000/96155 events, 4488 jets (744s)']\n"}
+,{"stream_name":"stdout","time":2773.889580196,"data":"[0.77 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_6.root']\n"}
+,{"stream_name":"stdout","time":2893.890307818,"data":"[0.80 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":2893.890871061,"data":"[0.80 h] mc_qcd_hbb: ['  23505 jets (728s)']\n"}
+,{"stream_name":"stdout","time":2893.893785663,"data":"[0.80 h] jetht: ['  10000/104218 events, 494 jets (90s)']\n"}
+,{"stream_name":"stdout","time":2893.894220153,"data":"[0.80 h] singlemuon: ['  230000/426210 events, 1 jets (124s)']\n"}
+,{"stream_name":"stdout","time":3013.894910672,"data":"[0.84 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3013.895215791,"data":"[0.84 h] mc_qcd_hbb: ['  28570 jets (883s)']\n"}
+,{"stream_name":"stdout","time":3013.895514437,"data":"[0.84 h] jetht: ['  26000/104218 events, 1358 jets (209s)']\n"}
+,{"stream_name":"stdout","time":3013.895772396,"data":"[0.84 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_7.root']\n"}
+,{"stream_name":"stdout","time":3133.899910204,"data":"[0.87 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3133.900021312,"data":"[0.87 h] mc_qcd_hbb: ['  31912 jets (984s)']\n"}
+,{"stream_name":"stdout","time":3133.900132744,"data":"[0.87 h] jetht: ['  42000/104218 events, 2160 jets (327s)']\n"}
+,{"stream_name":"stdout","time":3133.900248273,"data":"[0.87 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_8.root']\n"}
+,{"stream_name":"stdout","time":3253.90082458,"data":"[0.90 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3253.901164664,"data":"[0.90 h] mc_qcd_hbb: ['  35211 jets (1083s)']\n"}
+,{"stream_name":"stdout","time":3253.901180534,"data":"[0.90 h] jetht: ['  58000/104218 events, 2983 jets (455s)']\n"}
+,{"stream_name":"stdout","time":3253.901186068,"data":"[0.90 h] singlemuon: ['  86000/422864 events, 5 jets (68s)']\n"}
+,{"stream_name":"stdout","time":3373.901635045,"data":"[0.94 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3373.901923324,"data":"[0.94 h] mc_qcd_hbb: ['  40270 jets (1245s)']\n"}
+,{"stream_name":"stdout","time":3373.902226533,"data":"[0.94 h] jetht: ['  76000/104218 events, 3798 jets (577s)']\n"}
+,{"stream_name":"stdout","time":3373.902477441,"data":"[0.94 h] singlemuon: ['  334000/422864 events, 7 jets (206s)']\n"}
+,{"stream_name":"stdout","time":3493.904436356,"data":"[0.97 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3493.904481142,"data":"[0.97 h] mc_qcd_hbb: ['  43710 jets (1348s)']\n"}
+,{"stream_name":"stdout","time":3493.904487997,"data":"[0.97 h] jetht: ['  92000/104218 events, 4454 jets (688s)']\n"}
+,{"stream_name":"stdout","time":3493.904493468,"data":"[0.97 h] singlemuon: ['  178000/440904 events, 2 jets (88s)']\n"}
+,{"stream_name":"stdout","time":3613.905909644,"data":"[1.00 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3613.905979213,"data":"[1.00 h] mc_qcd_hbb: ['  47130 jets (1449s)']\n"}
+,{"stream_name":"stdout","time":3613.90605058,"data":"[1.00 h] jetht: ['  2000/103736 events, 96 jets (18s)']\n"}
+,{"stream_name":"stdout","time":3613.906223512,"data":"[1.00 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_10.root']\n"}
+,{"stream_name":"stdout","time":3733.908377501,"data":"[1.04 h] jetclass: ['[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root']\n"}
+,{"stream_name":"stdout","time":3733.908421042,"data":"[1.04 h] mc_qcd_hbb: ['  52082 jets (1601s)']\n"}
+,{"stream_name":"stdout","time":3733.908427024,"data":"[1.04 h] jetht: ['  18000/103736 events, 762 jets (143s)']\n"}
+,{"stream_name":"stdout","time":3733.908432303,"data":"[1.04 h] singlemuon: ['  148000/435121 events, 4 jets (109s)']\n"}
+,{"stream_name":"stdout","time":3853.908749399,"data":"[1.07 h] jetclass finished rc=0\n"}
+,{"stream_name":"stdout","time":3853.908943411,"data":"[1.07 h] mc_qcd_hbb: ['  57068 jets (1732s)']\n"}
+,{"stream_name":"stdout","time":3853.90907933,"data":"[1.07 h] jetht: ['  34000/103736 events, 1432 jets (256s)']\n"}
+,{"stream_name":"stdout","time":3853.909198078,"data":"[1.07 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_11.root']\n"}
+,{"stream_name":"stdout","time":3973.909715963,"data":"[1.10 h] mc_qcd_hbb: ['  62038 jets (1835s)']\n"}
+,{"stream_name":"stdout","time":3973.909937816,"data":"[1.10 h] jetht: ['  52000/103736 events, 2209 jets (373s)']\n"}
+,{"stream_name":"stdout","time":3973.910246894,"data":"[1.10 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_11.root']\n"}
+,{"stream_name":"stdout","time":4093.913940341,"data":"[1.14 h] mc_qcd_hbb: ['[run] mc_qcd_hbb: https://opendata.cern.ch/eos/opendata/cms/datascience/HiggsToBBNtupleProducerTool/HiggsToBBNTuple_HiggsToBB_QCD_RunII_13TeV_MC/test/ntuple_merged_2.root']\n"}
+,{"stream_name":"stdout","time":4093.91416948,"data":"[1.14 h] jetht: ['  70000/103736 events, 2940 jets (491s)']\n"}
+,{"stream_name":"stdout","time":4093.914550524,"data":"[1.14 h] singlemuon: ['  50000/428744 events, 1 jets (44s)']\n"}
+,{"stream_name":"stdout","time":4213.915504294,"data":"[1.17 h] mc_qcd_hbb: ['  6720 jets (140s)']\n"}
+,{"stream_name":"stdout","time":4213.915734291,"data":"[1.17 h] jetht: ['  90000/103736 events, 3811 jets (619s)']\n"}
+,{"stream_name":"stdout","time":4213.915747132,"data":"[1.17 h] singlemuon: ['  256000/428744 events, 2 jets (166s)']\n"}
+,{"stream_name":"stdout","time":4333.916439886,"data":"[1.20 h] mc_qcd_hbb: ['  11812 jets (248s)']\n"}
+,{"stream_name":"stdout","time":4333.916579724,"data":"[1.20 h] jetht: ['  4000/104165 events, 200 jets (32s)']\n"}
+,{"stream_name":"stdout","time":4333.916768351,"data":"[1.20 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_13.root']\n"}
+,{"stream_name":"stdout","time":4453.917472774,"data":"[1.24 h] mc_qcd_hbb: ['  18516 jets (378s)']\n"}
+,{"stream_name":"stdout","time":4453.917670711,"data":"[1.24 h] jetht: ['  24000/104165 events, 1000 jets (147s)']\n"}
+,{"stream_name":"stdout","time":4453.917814578,"data":"[1.24 h] singlemuon: ['  180000/428462 events, 1 jets (67s)']\n"}
+,{"stream_name":"stdout","time":4573.918555072,"data":"[1.27 h] mc_qcd_hbb: ['  25203 jets (505s)']\n"}
+,{"stream_name":"stdout","time":4573.918622161,"data":"[1.27 h] jetht: ['  44000/104165 events, 1772 jets (274s)']\n"}
+,{"stream_name":"stdout","time":4573.918707217,"data":"[1.27 h] singlemuon: ['  96000/430132 events, 1 jets (46s)']\n"}
+,{"stream_name":"stdout","time":4693.919795802,"data":"[1.30 h] mc_qcd_hbb: ['  30249 jets (610s)']\n"}
+,{"stream_name":"stdout","time":4693.91986046,"data":"[1.30 h] jetht: ['  66000/104165 events, 2577 jets (396s)']\n"}
+,{"stream_name":"stdout","time":4693.919867847,"data":"[1.30 h] singlemuon: ['  286000/430132 events, 6 jets (178s)']\n"}
+,{"stream_name":"stdout","time":4813.920993493,"data":"[1.34 h] mc_qcd_hbb: ['  36939 jets (742s)']\n"}
+,{"stream_name":"stdout","time":4813.921558775,"data":"[1.34 h] jetht: ['  86000/104165 events, 3294 jets (508s)']\n"}
+,{"stream_name":"stdout","time":4813.922038806,"data":"[1.34 h] singlemuon: ['  100000/414480 events, 1 jets (61s)']\n"}
+,{"stream_name":"stdout","time":4933.922648024,"data":"[1.37 h] mc_qcd_hbb: ['  43599 jets (873s)']\n"}
+,{"stream_name":"stdout","time":4933.922881644,"data":"[1.37 h] jetht: ['[run] jetht: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/JetHT/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240218_191008/0000/nano_data2016_1-8.root']\n"}
+,{"stream_name":"stdout","time":4933.922893858,"data":"[1.37 h] singlemuon: ['  348000/414480 events, 3 jets (178s)']\n"}
+,{"stream_name":"stdout","time":5053.923996189,"data":"[1.40 h] mc_qcd_hbb: ['  48677 jets (978s)']\n"}
+,{"stream_name":"stdout","time":5053.924036596,"data":"[1.40 h] jetht: ['  16000/103908 events, 860 jets (113s)']\n"}
+,{"stream_name":"stdout","time":5053.924042122,"data":"[1.40 h] singlemuon: ['  124000/432560 events, 2 jets (85s)']\n"}
+,{"stream_name":"stdout","time":5173.924543458,"data":"[1.44 h] mc_qcd_hbb: ['  53727 jets (1082s)']\n"}
+,{"stream_name":"stdout","time":5173.924871467,"data":"[1.44 h] jetht: ['  34000/103908 events, 1825 jets (240s)']\n"}
+,{"stream_name":"stdout","time":5173.9253092,"data":"[1.44 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_17.root']\n"}
+,{"stream_name":"stdout","time":5293.926597785,"data":"[1.47 h] mc_qcd_hbb: ['  60393 jets (1221s)']\n"}
+,{"stream_name":"stdout","time":5293.926656637,"data":"[1.47 h] jetht: ['  50000/103908 events, 2751 jets (363s)']\n"}
+,{"stream_name":"stdout","time":5293.926664178,"data":"[1.47 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_17.root']\n"}
+,{"stream_name":"stdout","time":5413.927305619,"data":"[1.50 h] mc_qcd_hbb: ['  65454 jets (1330s)']\n"}
+,{"stream_name":"stdout","time":5413.927670446,"data":"[1.50 h] jetht: ['  66000/103908 events, 3647 jets (481s)']\n"}
+,{"stream_name":"stdout","time":5413.927695551,"data":"[1.50 h] singlemuon: ['  348000/415191 events, 3 jets (197s)']\n"}
+,{"stream_name":"stdout","time":5533.928140182,"data":"[1.54 h] mc_qcd_hbb: ['  4990 jets (99s)']\n"}
+,{"stream_name":"stdout","time":5533.928529825,"data":"[1.54 h] jetht: ['  82000/103908 events, 4601 jets (604s)']\n"}
+,{"stream_name":"stdout","time":5533.928661598,"data":"[1.54 h] singlemuon: ['  172000/432276 events, 1 jets (93s)']\n"}
+,{"stream_name":"stdout","time":5653.929312058,"data":"[1.57 h] mc_qcd_hbb: ['  10159 jets (201s)']\n"}
+,{"stream_name":"stdout","time":5653.929749164,"data":"[1.57 h] jetht: ['  96000/103908 events, 5389 jets (726s)']\n"}
+,{"stream_name":"stdout","time":5653.930059834,"data":"[1.57 h] singlemuon: ['  172000/432276 events, 1 jets (93s)']\n"}
+,{"stream_name":"stdout","time":5773.930595889,"data":"[1.60 h] jetht finished rc=0\n"}
+,{"stream_name":"stdout","time":5773.930910353,"data":"[1.60 h] mc_qcd_hbb: ['  16908 jets (328s)']\n"}
+,{"stream_name":"stdout","time":5773.931082178,"data":"[1.60 h] singlemuon: ['  208000/432671 events, 1 jets (108s)']\n"}
+,{"stream_name":"stdout","time":5893.931769781,"data":"[1.64 h] mc_qcd_hbb: ['  23621 jets (451s)']\n"}
+,{"stream_name":"stdout","time":5893.931972617,"data":"[1.64 h] singlemuon: ['  34000/430037 events, 1 jets (16s)']\n"}
+,{"stream_name":"stdout","time":6013.93264824,"data":"[1.67 h] mc_qcd_hbb: ['  30242 jets (572s)']\n"}
+,{"stream_name":"stdout","time":6013.932769454,"data":"[1.67 h] singlemuon: ['  146000/430037 events, 3 jets (74s)']\n"}
+,{"stream_name":"stdout","time":6133.933495336,"data":"[1.70 h] mc_qcd_hbb: ['  37000 jets (696s)']\n"}
+,{"stream_name":"stdout","time":6133.933574133,"data":"[1.70 h] singlemuon: ['  26000/436875 events, 1 jets (19s)']\n"}
+,{"stream_name":"stdout","time":6253.934227742,"data":"[1.74 h] mc_qcd_hbb: ['  43639 jets (820s)']\n"}
+,{"stream_name":"stdout","time":6253.934269208,"data":"[1.74 h] singlemuon: ['  188000/436875 events, 2 jets (99s)']\n"}
+,{"stream_name":"stdout","time":6373.934786544,"data":"[1.77 h] mc_qcd_hbb: ['  50317 jets (945s)']\n"}
+,{"stream_name":"stdout","time":6373.934828048,"data":"[1.77 h] singlemuon: ['  90000/431726 events, 3 jets (52s)']\n"}
+,{"stream_name":"stdout","time":6493.93549713,"data":"[1.80 h] mc_qcd_hbb: ['  55366 jets (1041s)']\n"}
+,{"stream_name":"stdout","time":6493.935562125,"data":"[1.80 h] singlemuon: ['  328000/431726 events, 6 jets (178s)']\n"}
+,{"stream_name":"stdout","time":6613.936373608,"data":"[1.84 h] mc_qcd_hbb: ['  62025 jets (1161s)']\n"}
+,{"stream_name":"stdout","time":6613.936415065,"data":"[1.84 h] singlemuon: ['  96000/429863 events, 1 jets (57s)']\n"}
+,{"stream_name":"stdout","time":6733.93666344,"data":"[1.87 h] mc_qcd_hbb finished rc=0\n"}
+,{"stream_name":"stdout","time":6733.936910035,"data":"[1.87 h] singlemuon: ['  172000/429863 events, 3 jets (105s)']\n"}
+,{"stream_name":"stdout","time":6853.937503334,"data":"[1.90 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_24.root']\n"}
+,{"stream_name":"stdout","time":6973.938001485,"data":"[1.94 h] singlemuon: ['  284000/471258 events, 3 jets (157s)']\n"}
+,{"stream_name":"stdout","time":7093.938488257,"data":"[1.97 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_25.root']\n"}
+,{"stream_name":"stdout","time":7213.938971085,"data":"[2.00 h] singlemuon: ['  120000/393081 events, 3 jets (114s)']\n"}
+,{"stream_name":"stdout","time":7333.939441016,"data":"[2.04 h] singlemuon: ['  120000/393081 events, 3 jets (114s)']\n"}
+,{"stream_name":"stdout","time":7453.940209985,"data":"[2.07 h] singlemuon: ['[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_26.root']\n"}
+,{"stream_name":"stdout","time":7573.940637462,"data":"[2.10 h] singlemuon: ['  82000/432979 events, 1 jets (47s)']\n"}
+,{"stream_name":"stdout","time":7693.941156401,"data":"[2.14 h] singlemuon: ['  14000/446167 events, 1 jets (12s)']\n"}
+,{"stream_name":"stdout","time":7813.941732397,"data":"[2.17 h] singlemuon: ['  42000/446167 events, 2 jets (39s)']\n"}
+,{"stream_name":"stdout","time":7933.942191089,"data":"[2.20 h] singlemuon: ['  82000/418293 events, 1 jets (39s)']\n"}
+,{"stream_name":"stdout","time":8053.942711544,"data":"[2.24 h] singlemuon: ['  82000/418293 events, 1 jets (39s)']\n"}
+,{"stream_name":"stdout","time":8173.943205442,"data":"[2.27 h] singlemuon finished rc=0\n"}
+,{"stream_name":"stdout","time":8173.943324941,"data":"==== jetclass.log (tail)\n"}
+,{"stream_name":"stdout","time":8173.943617566,"data":"[run] checkpoint jetclass.npz: 100000 jets, 0 events, 2010.6 s\n"}
+,{"stream_name":"stdout","time":8173.943631614,"data":"[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root\n"}
+,{"stream_name":"stdout","time":8173.943637789,"data":"  50000 jets from /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/WToQQ_120.root\n"}
+,{"stream_name":"stdout","time":8173.943642963,"data":"[run] checkpoint jetclass.npz: 150000 jets, 0 events, 2682.3 s\n"}
+,{"stream_name":"stdout","time":8173.943648033,"data":"[run] jetclass: /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root\n"}
+,{"stream_name":"stdout","time":8173.943652662,"data":"  50000 jets from /kaggle/input/datasets/suryatrainer/jetclass-val/val_data/ZJetsToNuNu_120.root\n"}
+,{"stream_name":"stdout","time":8173.943657262,"data":"[run] checkpoint jetclass.npz: 200000 jets, 0 events, 3806.2 s\n"}
+,{"stream_name":"stdout","time":8173.9436618,"data":"[run] wrote jetclass.npz: 200000 jets, 0 events, 3807.3 s\n"}
+,{"stream_name":"stdout","time":8173.943667091,"data":"==== mc_qcd_hbb.log (tail)\n"}
+,{"stream_name":"stdout","time":8173.943817841,"data":"  58720 jets (1099s)\n"}
+,{"stream_name":"stdout","time":8173.943826861,"data":"  60348 jets (1130s)\n"}
+,{"stream_name":"stdout","time":8173.943831545,"data":"  62025 jets (1161s)\n"}
+,{"stream_name":"stdout","time":8173.943836459,"data":"  63747 jets (1193s)\n"}
+,{"stream_name":"stdout","time":8173.943841119,"data":"  65387 jets (1222s)\n"}
+,{"stream_name":"stdout","time":8173.943928468,"data":"  67071 jets (1250s)\n"}
+,{"stream_name":"stdout","time":8173.943933547,"data":"[run] checkpoint mc_qcd_hbb.npz: 268394 jets, 0 events, 6658.4 s\n"}
+,{"stream_name":"stdout","time":8173.943937707,"data":"[run] wrote mc_qcd_hbb.npz: 268394 jets, 0 events, 6660.7 s\n"}
+,{"stream_name":"stdout","time":8173.943940973,"data":"==== jetht.log (tail)\n"}
+,{"stream_name":"stdout","time":8173.944074352,"data":"  90000/103908 events, 5049 jets (675s)\n"}
+,{"stream_name":"stdout","time":8173.944080844,"data":"  92000/103908 events, 5179 jets (694s)\n"}
+,{"stream_name":"stdout","time":8173.94408446,"data":"  94000/103908 events, 5299 jets (711s)\n"}
+,{"stream_name":"stdout","time":8173.944088376,"data":"  96000/103908 events, 5389 jets (726s)\n"}
+,{"stream_name":"stdout","time":8173.944092039,"data":"  98000/103908 events, 5535 jets (739s)\n"}
+,{"stream_name":"stdout","time":8173.944095741,"data":"  100000/103908 events, 5653 jets (754s)\n"}
+,{"stream_name":"stdout","time":8173.944106232,"data":"[run] ERROR on https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/JetHT/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240218_191008/0000/nano_data2016_1-8.root: TypeError: 'ClientPayloadError' object is not subscriptable\n"}
+,{"stream_name":"stdout","time":8173.944112029,"data":"[run] wrote jetht.npz: 31160 jets, 658283 events, 5672.8 s\n"}
+,{"stream_name":"stdout","time":8173.944116141,"data":"==== singlemuon.log (tail)\n"}
+,{"stream_name":"stdout","time":8173.944271646,"data":"  14000/446167 events, 1 jets (12s)\n"}
+,{"stream_name":"stdout","time":8173.944288613,"data":"  42000/446167 events, 2 jets (39s)\n"}
+,{"stream_name":"stdout","time":8173.944293468,"data":"[run] checkpoint singlemuon.npz: 94 jets, 13861342 events, 7861.9 s\n"}
+,{"stream_name":"stdout","time":8173.94429714,"data":"[run] singlemuon: https://opendata.cern.ch/eos/opendata/cms/derived-data/PFNano/29-Feb-24/SingleMuon/Run2016G-UL2016_MiniAODv2_PFNanoAODv1/240207_205649/0000/nano_data2016_28.root\n"}
+,{"stream_name":"stdout","time":8173.944301285,"data":"  82000/418293 events, 1 jets (39s)\n"}
+,{"stream_name":"stdout","time":8173.944305435,"data":"  380000/418293 events, 2 jets (186s)\n"}
+,{"stream_name":"stdout","time":8173.94430959,"data":"[run] checkpoint singlemuon.npz: 96 jets, 14279635 events, 8062.1 s\n"}
+,{"stream_name":"stdout","time":8173.944313609,"data":"[run] wrote singlemuon.npz: 96 jets, 14279635 events, 8062.1 s\n"}
+,{"stream_name":"stdout","time":8173.944317565,"data":"+ python /kaggle/working/GDS-ParT-CMS-OpenData/src/cmsod/analyze.py --in /kaggle/working/results --out /kaggle/working/results/report\n"}
+,{"stream_name":"stdout","time":8218.316719634,"data":"# GDS-ParT on CMS Open Data: data vs simulation\n"}
+,{"stream_name":"stdout","time":8218.316759797,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316766846,"data":"### data_JetHT_vs_CMSsim_QCD (A = JetHT data, B = CMS sim QCD, B reweighted to A in jet pT)\n"}
+,{"stream_name":"stdout","time":8218.316773368,"data":"\n"}
+,{"stream_name":"stdout","time":8218.31677838,"data":"| observable | mean A | mean B | KS D | p(KS) | chi2/ndf |\n"}
+,{"stream_name":"stdout","time":8218.316783676,"data":"|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.316788528,"data":"| score_QCD | 0.5343 | 0.5217 | 0.052 | 5.7e-59 | 734.4/17 |\n"}
+,{"stream_name":"stdout","time":8218.31679416,"data":"| TvsQCD | 0.1319 | 0.1325 | 0.055 | 4.8e-65 | 192.6/19 |\n"}
+,{"stream_name":"stdout","time":8218.31679922,"data":"| WvsQCD | 0.1411 | 0.1211 | 0.049 | 1.2e-52 | 521.6/19 |\n"}
+,{"stream_name":"stdout","time":8218.316804035,"data":"| HbbvsQCD | 0.1342 | 0.1440 | 0.064 | 6.8e-87 | 251.6/19 |\n"}
+,{"stream_name":"stdout","time":8218.316821323,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316826377,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **jet_pt**:\n"}
+,{"stream_name":"stdout","time":8218.316829135,"data":"\n"}
+,{"stream_name":"stdout","time":8218.31683192,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.316834581,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.316836959,"data":"| [500, 600) | 19866 | 58918 | 0.057 | 0.055 | 0.538 | 0.522 |\n"}
+,{"stream_name":"stdout","time":8218.316839447,"data":"| [600, 700) | 6894 | 44688 | 0.056 | 0.051 | 0.529 | 0.521 |\n"}
+,{"stream_name":"stdout","time":8218.316841864,"data":"| [700, 800) | 2749 | 44235 | 0.075 | 0.066 | 0.532 | 0.514 |\n"}
+,{"stream_name":"stdout","time":8218.316844313,"data":"| [800, 1000) | 1651 | 68385 | 0.039 | 0.053 | 0.515 | 0.532 |\n"}
+,{"stream_name":"stdout","time":8218.316846963,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316849241,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **abs_eta**:\n"}
+,{"stream_name":"stdout","time":8218.316851753,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316854076,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.316856569,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.316859236,"data":"| [0.0, 0.5) | 11814 | 80962 | 0.044 | 0.045 | 0.558 | 0.554 |\n"}
+,{"stream_name":"stdout","time":8218.316863017,"data":"| [0.5, 1.0) | 10101 | 69807 | 0.062 | 0.059 | 0.546 | 0.532 |\n"}
+,{"stream_name":"stdout","time":8218.31686666,"data":"| [1.0, 1.5) | 6055 | 44722 | 0.052 | 0.051 | 0.493 | 0.484 |\n"}
+,{"stream_name":"stdout","time":8218.316870636,"data":"| [1.5, 2.0) | 3190 | 20735 | 0.075 | 0.061 | 0.489 | 0.467 |\n"}
+,{"stream_name":"stdout","time":8218.316874591,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316878206,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **n_constituents**:\n"}
+,{"stream_name":"stdout","time":8218.316882028,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316885802,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.316889472,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.316893213,"data":"| [0, 30) | 9038 | 37375 | 0.025 | 0.015 | 0.746 | 0.750 |\n"}
+,{"stream_name":"stdout","time":8218.316897151,"data":"| [30, 45) | 11099 | 67994 | 0.060 | 0.057 | 0.555 | 0.592 |\n"}
+,{"stream_name":"stdout","time":8218.316901259,"data":"| [45, 60) | 7136 | 58188 | 0.112 | 0.103 | 0.375 | 0.436 |\n"}
+,{"stream_name":"stdout","time":8218.316905065,"data":"| [60, 80) | 3325 | 39372 | 0.122 | 0.123 | 0.278 | 0.327 |\n"}
+,{"stream_name":"stdout","time":8218.316908849,"data":"| [80, 200) | 562 | 13297 | 0.110 | 0.117 | 0.258 | 0.297 |\n"}
+,{"stream_name":"stdout","time":8218.316912722,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316916239,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **npv**:\n"}
+,{"stream_name":"stdout","time":8218.316920021,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316923539,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.316929947,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.316933916,"data":"| [0, 10) | 1676 | 8231 | 0.057 | 0.058 | 0.542 | 0.522 |\n"}
+,{"stream_name":"stdout","time":8218.316939455,"data":"| [10, 20) | 21201 | 98486 | 0.041 | 0.041 | 0.534 | 0.525 |\n"}
+,{"stream_name":"stdout","time":8218.316948168,"data":"| [20, 30) | 7865 | 81924 | 0.054 | 0.052 | 0.534 | 0.521 |\n"}
+,{"stream_name":"stdout","time":8218.316950858,"data":"| [30, 80) | 418 | 27566 | 0.051 | 0.048 | 0.508 | 0.510 |\n"}
+,{"stream_name":"stdout","time":8218.316953339,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316956369,"data":"Input-feature KS D (particle level, normalized as fed to the network): pt_log=0.006, e_log=0.011, logptrel=0.082, logerel=0.074, deltaR=0.022, deta=0.009, dphi=0.013, charge=0.005, isChargedHadron=0.009, isNeutralHadron=0.007, isPhoton=0.015, isElectron=0.001, isMuon=0.001, tanh_d0=0.007, d0err=0.030, tanh_dz=0.007, dzerr=0.056\n"}
+,{"stream_name":"stdout","time":8218.316961583,"data":"\n"}
+,{"stream_name":"stdout","time":8218.31696518,"data":"### CMSsim_QCD_vs_JetClass_QCD (A = CMS sim QCD, B = JetClass QCD, B reweighted to A in jet pT)\n"}
+,{"stream_name":"stdout","time":8218.316969468,"data":"\n"}
+,{"stream_name":"stdout","time":8218.316972978,"data":"| observable | mean A | mean B | KS D | p(KS) | chi2/ndf |\n"}
+,{"stream_name":"stdout","time":8218.316977006,"data":"|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.316980876,"data":"| score_QCD | 0.5234 | 0.6306 | 0.222 | 0 | 6784.3/17 |\n"}
+,{"stream_name":"stdout","time":8218.316984868,"data":"| TvsQCD | 0.1372 | 0.0602 | 0.267 | 0 | 9266.4/19 |\n"}
+,{"stream_name":"stdout","time":8218.316988899,"data":"| WvsQCD | 0.1137 | 0.1298 | 0.162 | 0 | 3188.0/19 |\n"}
+,{"stream_name":"stdout","time":8218.316992965,"data":"| HbbvsQCD | 0.1432 | 0.0519 | 0.364 | 0 | 18471.8/19 |\n"}
+,{"stream_name":"stdout","time":8218.316996779,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317000577,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **jet_pt**:\n"}
+,{"stream_name":"stdout","time":8218.317004403,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317007964,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.317011898,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.317015568,"data":"| [500, 600) | 58918 | 25876 | 0.254 | 0.213 | 0.522 | 0.622 |\n"}
+,{"stream_name":"stdout","time":8218.317019416,"data":"| [600, 700) | 44688 | 12787 | 0.261 | 0.216 | 0.520 | 0.622 |\n"}
+,{"stream_name":"stdout","time":8218.317023239,"data":"| [700, 800) | 44235 | 6417 | 0.286 | 0.247 | 0.515 | 0.635 |\n"}
+,{"stream_name":"stdout","time":8218.31702704,"data":"| [800, 1000) | 68385 | 4920 | 0.274 | 0.231 | 0.532 | 0.641 |\n"}
+,{"stream_name":"stdout","time":8218.317031143,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317034741,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **abs_eta**:\n"}
+,{"stream_name":"stdout","time":8218.317040169,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317043768,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.317047816,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.317051388,"data":"| [0.0, 0.5) | 80962 | 19200 | 0.242 | 0.181 | 0.556 | 0.629 |\n"}
+,{"stream_name":"stdout","time":8218.317055239,"data":"| [0.5, 1.0) | 69807 | 15985 | 0.260 | 0.215 | 0.531 | 0.629 |\n"}
+,{"stream_name":"stdout","time":8218.317058088,"data":"| [1.0, 1.5) | 44722 | 10469 | 0.310 | 0.286 | 0.480 | 0.634 |\n"}
+,{"stream_name":"stdout","time":8218.317062352,"data":"| [1.5, 2.0) | 20735 | 4346 | 0.326 | 0.302 | 0.463 | 0.639 |\n"}
+,{"stream_name":"stdout","time":8218.317066565,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317070279,"data":"KS D of `TvsQCD` / `score_QCD` in slices of **n_constituents**:\n"}
+,{"stream_name":"stdout","time":8218.317074656,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317083359,"data":"| slice | n A | n B | KS D (TvsQCD) | KS D (score_QCD) | mean QCD A | mean QCD B |\n"}
+,{"stream_name":"stdout","time":8218.317087748,"data":"|---|---|---|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":8218.317091639,"data":"| [0, 30) | 37375 | 21846 | 0.249 | 0.253 | 0.741 | 0.775 |\n"}
+,{"stream_name":"stdout","time":8218.317095496,"data":"| [30, 45) | 67994 | 14805 | 0.161 | 0.092 | 0.591 | 0.592 |\n"}
+,{"stream_name":"stdout","time":8218.317100346,"data":"| [45, 60) | 58188 | 8385 | 0.139 | 0.105 | 0.455 | 0.487 |\n"}
+,{"stream_name":"stdout","time":8218.317104266,"data":"| [60, 80) | 39372 | 4117 | 0.278 | 0.140 | 0.365 | 0.438 |\n"}
+,{"stream_name":"stdout","time":8218.317108176,"data":"| [80, 200) | 13297 | 847 | 0.488 | 0.284 | 0.335 | 0.461 |\n"}
+,{"stream_name":"stdout","time":8218.317112068,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317115649,"data":"Input-feature KS D (particle level, normalized as fed to the network): pt_log=0.172, e_log=0.173, logptrel=0.216, logerel=0.216, deltaR=0.090, deta=0.043, dphi=0.040, charge=0.059, isChargedHadron=0.115, isNeutralHadron=0.008, isPhoton=0.119, isElectron=0.005, isMuon=0.000, tanh_d0=0.075, d0err=0.237, tanh_dz=0.062, dzerr=0.118\n"}
+,{"stream_name":"stdout","time":8218.31712051,"data":"\n"}
+,{"stream_name":"stdout","time":8218.31712405,"data":"### ttbar mu+jets control region\n"}
+,{"stream_name":"stdout","time":8218.317127798,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317131621,"data":"- SingleMuon W-like msd 65-105: n=8, mean TvsQCD=0.325, frac(TvsQCD\u003e0.5)=0.125\n"}
+,{"stream_name":"stdout","time":8218.317136009,"data":"- SingleMuon top-like msd 105-210: n=33, mean TvsQCD=0.700, frac(TvsQCD\u003e0.5)=0.727\n"}
+,{"stream_name":"stdout","time":8218.317140027,"data":"- JetHT dijet: n=31160, mean TvsQCD=0.132, frac(TvsQCD\u003e0.5)=0.088\n"}
+,{"stream_name":"stdout","time":8218.317144407,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317147985,"data":"- HbbvsQCD ROC AUC on CMS full simulation (truth labels): 0.9745\n"}
+,{"stream_name":"stdout","time":8218.317151848,"data":"\n"}
+,{"stream_name":"stdout","time":8218.317154846,"data":"- HbbvsQCD ROC AUC on JetClass (same pT/eta window): 0.9983\n"}
+,{"stream_name":"stdout","time":8218.317158619,"data":"\n"}
+,{"stream_name":"stdout","time":8218.711090773,"data":"+ cd /kaggle/working \u0026\u0026 tar czf results.tgz results\n"}
+,{"stream_name":"stdout","time":8221.808544957,"data":"done in 2.28 h\n"}
+,{"stream_name":"stderr","time":8224.824068877,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":8224.824104976,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":8225.157333599,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":8225.157381626,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":8226.088428232,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":8227.336591853,"data":"[NbConvertApp] Writing 294992 bytes to __results__.html\n"}
+]

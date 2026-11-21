@@ -45,6 +45,67 @@ def reweight(src, tgt, var="jet_pt", bins=np.linspace(500, 1000, 26)):
     return r[i]
 
 
+def reweight2d(src, tgt, var2, bins2, var="jet_pt", bins=np.linspace(500, 1000, 11)):
+    """Like reweight, in two variables (e.g. jet pT x n_constituents)."""
+    def h(t):
+        x, y = t[var], slice_var(t, var2)
+        hh, _, _ = np.histogram2d(x, y, [bins, bins2])
+        return hh / max(hh.sum(), 1)
+    hs, ht = h(src), h(tgt)
+    r = np.divide(ht, hs, out=np.zeros_like(ht), where=hs > 0)
+    i = np.clip(np.digitize(src[var], bins) - 1, 0, len(bins) - 2)
+    j = np.clip(np.digitize(slice_var(src, var2), bins2) - 1, 0, len(bins2) - 2)
+    return r[i, j]
+
+
+def profile(x, y, edges, w=None):
+    """Weighted mean of y and its error in bins of x."""
+    w = np.ones(len(x)) if w is None else w
+    m, e = [], []
+    for lo, hi in zip(edges[:-1], edges[1:]):
+        s = (x >= lo) & (x < hi)
+        ws = w[s]
+        if ws.sum() <= 0 or s.sum() < 10:
+            m.append(np.nan)
+            e.append(np.nan)
+            continue
+        mu = np.average(y[s], weights=ws)
+        neff = ws.sum() ** 2 / (ws ** 2).sum()
+        m.append(mu)
+        e.append(np.sqrt(np.average((y[s] - mu) ** 2, weights=ws) / neff))
+    return np.array(m), np.array(e)
+
+
+def plot_profiles(ta, tb, wb, obs, labels, path, title=""):
+    """Mean of `obs` vs each slice variable for samples A (points) and B (line),
+    with the difference A - B below."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    oa, ob = observables(ta)[obs], observables(tb)[obs]
+    vars_ = [v for v in SLICES if (v in ta and v in tb) or v == "abs_eta"]
+    fig, axs = plt.subplots(2, len(vars_), figsize=(3.6 * len(vars_), 4.8), sharex="col",
+                            gridspec_kw={"height_ratios": [2, 1], "hspace": 0.05})
+    for c, v in enumerate(vars_):
+        edges = {"jet_pt": np.linspace(500, 1000, 11), "abs_eta": np.linspace(0, 2, 9),
+                 "n_constituents": np.arange(0, 125, 10), "npv": np.arange(0, 45, 5)}[v]
+        ctr = 0.5 * (edges[1:] + edges[:-1])
+        ma, ea = profile(slice_var(ta, v), oa, edges)
+        mb, eb = profile(slice_var(tb, v), ob, edges, wb)
+        axs[0, c].errorbar(ctr, ma, ea, fmt="ko", ms=3, label=labels[0])
+        axs[0, c].errorbar(ctr, mb, eb, fmt="s-", ms=3, label=labels[1])
+        axs[1, c].errorbar(ctr, ma - mb, np.hypot(ea, eb), fmt="ko", ms=3)
+        axs[1, c].axhline(0, color="grey", lw=0.8)
+        axs[1, c].set_xlabel(v)
+    axs[0, 0].set_ylabel(f"mean {obs}")
+    axs[1, 0].set_ylabel("A - B")
+    axs[0, 0].legend(fontsize=8)
+    fig.suptitle(title, fontsize=10)
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    fig.savefig(path, dpi=110, bbox_inches="tight")
+    plt.close(fig)
+
+
 def weighted_ks(x1, x2, w1=None, w2=None):
     """Two-sample KS statistic with weights, and an asymptotic p-value using
     Kish effective sample sizes."""

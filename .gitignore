@@ -5,3 +5,4 @@ results/**/*.npz
 !results/local/*.npz
 .pytest_cache/
 *.tgz
+!results/kaggle_run/*.npz

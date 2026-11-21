@@ -83,6 +83,42 @@ def main(argv=None):
             md.append("Input-feature KS D (particle level, normalized as fed to the network): " +
                       ", ".join(f"{k}={v:.3f}" for k, v in feat_ks.items()) + "\n")
 
+    if data and mc_qcd:
+        # where does the data/MC difference come from? (a) kinematics / multiplicity of the
+        # inputs, (b) tagger output after also matching n_constituents
+        w1 = C.reweight(mc_qcd, data)
+        kin = {}
+        for k in ["n_constituents", "npv", "jet_mass", "msd", "jet_pt"]:
+            ks, p = C.weighted_ks(data[k].astype(float), mc_qcd[k].astype(float), None, w1)
+            kin[k] = {"mean_data": float(np.mean(data[k])), "mean_mc": float(np.average(mc_qcd[k], weights=w1)),
+                      "ks": ks, "p_ks": p}
+        kin["constituent_pt_over_nano_pt"] = {"data": float(np.mean(data["jet_pt"] / data["jet_pt_nano"])),
+                                              "mc": float(np.mean(mc_qcd["jet_pt"] / mc_qcd["jet_pt_nano"]))}
+        w2 = C.reweight2d(mc_qcd, data, "n_constituents", np.array([0, 20, 30, 40, 50, 60, 70, 80, 100, 200]))
+        oa, ob = C.observables(data), C.observables(mc_qcd)
+        rw = {k: C.compare(oa[k], ob[k], None, w2) for k in ["score_QCD", "TvsQCD", "WvsQCD", "HbbvsQCD"]}
+        summary["data_vs_CMSsim_diagnostics"] = {"kinematics_pt_reweighted": kin,
+                                                 "outputs_reweighted_pt_x_nconst": rw}
+        md.append("### Data vs CMS simulation diagnostics\n\n| jet variable | mean data | mean sim (pT-rw) | KS D |\n|---|---|---|---|\n" +
+                  "\n".join(f"| {k} | {v['mean_data']:.2f} | {v['mean_mc']:.2f} | {v['ks']:.3f} |"
+                            for k, v in kin.items() if "ks" in v) +
+                  f"\n\nconstituent-sum pT / NanoAOD jet pT: data {kin['constituent_pt_over_nano_pt']['data']:.3f}, "
+                  f"sim {kin['constituent_pt_over_nano_pt']['mc']:.3f}\n\n"
+                  "Tagger outputs after reweighting simulation in (jet pT x n_constituents):\n\n"
+                  "| observable | mean data | mean sim | KS D | p(KS) | chi2/ndf |\n|---|---|---|---|---|---|\n" +
+                  "\n".join(f"| {k} | {g['mean_a']:.4f} | {g['mean_b']:.4f} | {g['ks']:.3f} | {g['p_ks']:.2g} | "
+                            f"{g['chi2']:.1f}/{g['ndf']} |" for k, g in rw.items()) + "\n")
+        for k in ["score_QCD", "TvsQCD", "HbbvsQCD"]:
+            C.plot_compare([oa[k], ob[k]], ["JetHT data", "CMS sim QCD"], [None, w2],
+                           title="data vs sim, sim reweighted in pT x n_constituents", xlabel=k,
+                           path=os.path.join(args.out, f"data_JetHT_vs_CMSsim_QCD_rwNconst_{k}.png"))
+            C.plot_profiles(data, mc_qcd, w1, k, ["JetHT data", "CMS sim QCD (pT-rw)"],
+                            os.path.join(args.out, f"data_JetHT_vs_CMSsim_QCD_profile_{k}.png"),
+                            title=f"mean {k} vs jet variables")
+        C.plot_compare([data["npv"], mc_qcd["npv"]], ["JetHT data", "CMS sim QCD"], [None, w1], rng=(0, 50),
+                       bins=25, title="data_JetHT_vs_CMSsim_QCD", xlabel="npv", logy=False,
+                       path=os.path.join(args.out, "data_JetHT_vs_CMSsim_QCD_npv.png"))
+
     if smu:
         cats = {1: "W-like msd 65-105", 2: "top-like msd 105-210"}
         o = C.observables(smu)
