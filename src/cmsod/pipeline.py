@@ -25,6 +25,31 @@ def open_tree(url, treename, timeout=180):
     return uproot.open(url, **opts)[treename]
 
 
+class RetryTree:
+    """Wraps an uproot TTree read over HTTP: a dropped connection (e.g. aiohttp
+    ClientPayloadError, which can surface as a TypeError inside fsspec) reopens
+    the file and retries the same entry range instead of losing the whole file."""
+
+    def __init__(self, url, treename, tries=4, wait=20):
+        self.url, self.treename, self.tries, self.wait = url, treename, tries, wait
+        self.tree = open_tree(url, treename)
+        self.num_entries = self.tree.num_entries
+
+    def arrays(self, *args, **kw):
+        for i in range(self.tries):
+            try:
+                return self.tree.arrays(*args, **kw)
+            except Exception as e:
+                if i == self.tries - 1:
+                    raise
+                print(f"  read error ({type(e).__name__}: {e}); retry {i + 1}/{self.tries - 1}", flush=True)
+                time.sleep(self.wait * (i + 1))
+                try:
+                    self.tree = open_tree(self.url, self.treename)
+                except Exception as e2:
+                    print(f"  reopen failed: {type(e2).__name__}: {e2}", flush=True)
+
+
 PART_SAMPLE_PER_CHUNK = 5000
 
 
@@ -76,7 +101,7 @@ def process_pfnano(url, region, model, cache_mod, golden=None, device="cpu", max
                    step=2000, pt_range=(S.PT_MIN, S.PT_MAX), eta_max=S.ABS_ETA_MAX,
                    chs_like=True, log=print):
     import awkward as ak
-    tree = open_tree(url, "Events")
+    tree = RetryTree(url, "Events")
     if region == "qcd_dijet":
         branches, select = S.JETHT_EVENT_BRANCHES, S.select_qcd_dijet
     elif region == "ttbar_mujets":
@@ -129,13 +154,14 @@ def process_pfnano(url, region, model, cache_mod, golden=None, device="cpu", max
 def process_mc(url, model, cache_mod, device="cpu", max_jets=None, step=5000,
                pt_range=(S.PT_MIN, S.PT_MAX), eta_max=S.ABS_ETA_MAX, log=print):
     import awkward as ak
-    tree = open_tree(url, "deepntuplizer/tree")
+    tree = RetryTree(url, "deepntuplizer/tree")
     stop = min(tree.num_entries, max_jets) if max_jets else tree.num_entries
     tables, t0 = [], time.time()
-    for t in tree.iterate(F.MC_BRANCHES, entry_stop=stop, step_size=step, library="ak"):
+    for start in range(0, stop, step):
         if past_deadline():
             log("  deadline reached, stopping")
             break
+        t = tree.arrays(F.MC_BRANCHES, entry_start=start, entry_stop=min(start + step, stop), library="ak")
         pre = S.select_mc(t, 0.8 * pt_range[0], 1.2 * pt_range[1], eta_max + 0.2)
         t = t[pre]
         jc = F.constituents_to_jetclass(F.mc_ntuple_constituents(t))

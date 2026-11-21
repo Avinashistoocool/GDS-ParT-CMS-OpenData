@@ -12,8 +12,8 @@ import sys
 import time
 
 T0 = time.time()
-CFG = {  # full-size defaults
-    "BUDGET_H": 10.5, "N_JETHT_FILES": 8, "MAX_EVENTS": 200000, "N_SMU_FILES": 60,
+CFG = {  # full-size defaults (v4 on CPU did 7 JetHT + 60 SingleMuon files in 2.3 h)
+    "BUDGET_H": 10.5, "N_JETHT_FILES": 40, "MAX_EVENTS": 200000, "N_SMU_FILES": 200,
     "N_MC_FILES": 4, "MAX_MC_JETS": 0, "JC_JETS": 50000,
 }
 for k in CFG:
